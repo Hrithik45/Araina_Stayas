@@ -5,56 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Araina Stays - Bhimtal</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background-color: #2E8B57; color: white; padding: 20px; text-align: center; }
-    nav { background-color: #f0f0f0; padding: 10px; text-align: center; }
-    nav a { margin: 0 15px; text-decoration: none; color: #2E8B57; font-weight: bold; }
-    section { padding: 20px; }
-    footer { background-color: #2E8B57; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
-    .room-box { background: #f9f9f9; padding: 15px; border: 1px solid #ccc; border-radius: 10px; margin: 20px 0; }
-    .form-group { margin: 10px 0; }
-    input, textarea { width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
-    input[type="submit"] { background-color: #2E8B57; color: white; border: none; padding: 10px; cursor: pointer; }
-    .gallery img { width: 100%; max-width: 300px; margin: 10px; border-radius: 10px; }
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; scroll-behavior: smooth; }
+    header { background-color: #2E8B57; color: white; padding: 30px 20px; text-align: center; }
+    nav { background-color: #f0f0f0; text-align: center; padding: 10px 0; position: sticky; top: 0; z-index: 1000; }
+    nav a { margin: 0 15px; text-decoration: none; color: #2E8B57; font-weight: bold; font-size: 18px; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    .room-box, .form-group, .gallery img { margin-bottom: 20px; }
+    .room-box { padding: 15px; border: 1px solid #ccc; border-radius: 10px; background: #f9f9f9; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .gallery img { width: 100%; max-width: 300px; border-radius: 10px; }
+    input, textarea { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+    input[type="submit"] { background-color: #2E8B57; color: white; cursor: pointer; border: none; }
+    footer { background-color: #2E8B57; color: white; text-align: center; padding: 15px; }
+    .btns a { display: inline-block; margin: 10px; padding: 10px 20px; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px; }
+    .btns a.call { background-color: #007BFF; }
+    iframe { width: 100%; height: 300px; border: 0; border-radius: 10px; }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Araina Stays</h1>
     <p>Near Graphic Era Hill University, Bhimtal, Uttarakhand</p>
   </header>
 
   <nav>
-    <a href="#home">Home</a>
+    <a href="#about">About</a>
     <a href="#rooms">Rooms</a>
     <a href="#gallery">Gallery</a>
     <a href="#booking">Booking</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="home">
+  <section id="about">
     <h2>Welcome to Araina Stays</h2>
-    <p>Welcome to Araina Stays – a peaceful and cozy homestay nestled in the serene hills of Bhimtal, just a walk away from Graphic Era Hill University. Our homestay features two floors, each with 3 spacious bedrooms and an open kitchen, making it ideal for families, groups, or students visiting the town. We offer warm hospitality, clean rooms, and beautiful natural surroundings to make your stay comfortable and memorable.</p>
+    <p>Welcome to Araina Stays – a peaceful and cozy homestay nestled in the serene hills of Bhimtal, just a walk away from Graphic Era Hill University. Whether you're a student visitor, a nature lover, or a traveler looking for quiet relaxation, Araina Stays offers a perfect blend of comfort and natural beauty. We provide spacious 3-bedroom per floor (2 floors total), open kitchens, and warm hospitality to make you feel at home.</p>
   </section>
 
   <section id="rooms">
     <h2>Our Rooms</h2>
     <div class="room-box">
-      <h3>3-Bedroom Floor</h3>
-      <p>Each floor includes 3 spacious bedrooms, an open kitchen, and modern bathrooms. Ideal for families or groups looking for a long or short stay.</p>
-      <p><strong>Facilities:</strong> Open kitchen, attached bathrooms, WiFi, hill view, peaceful surroundings.</p>
-      <p><strong>Price:</strong> Contact us for pricing</p>
+      <h3>3-Bedroom (Per Floor)</h3>
+      <p>Each floor includes 3 bedrooms with open kitchen, clean bathrooms, WiFi, 24x7 water supply, and beautiful hill views.</p>
+      <p><strong>Total:</strong> 6 Bedrooms (2 Floors)</p>
+      <p><strong>Price:</strong> Contact for pricing</p>
     </div>
   </section>
 
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/300x200?text=Bedroom+1" alt="Bedroom 1">
-      <img src="https://via.placeholder.com/300x200?text=Bedroom+2" alt="Bedroom 2">
-      <img src="https://via.placeholder.com/300x200?text=Open+Kitchen" alt="Open Kitchen">
-      <img src="https://via.placeholder.com/300x200?text=Outside+View" alt="Outside View">
+      <img src="https://via.placeholder.com/300x200?text=Room+1" alt="Room 1" />
+      <img src="https://via.placeholder.com/300x200?text=Room+2" alt="Room 2" />
+      <img src="https://via.placeholder.com/300x200?text=Open+Kitchen" alt="Kitchen" />
+      <img src="https://via.placeholder.com/300x200?text=Hill+View" alt="View" />
     </div>
   </section>
 
@@ -63,41 +67,44 @@
     <form action="mailto:ritikrana70231@gmail.com" method="post" enctype="text/plain">
       <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" name="name" id="name" required />
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" name="email" id="email" required />
       </div>
       <div class="form-group">
         <label for="dates">Check-in & Check-out Dates:</label>
-        <input type="text" id="dates" name="dates" required>
+        <input type="text" name="dates" id="dates" required />
       </div>
       <div class="form-group">
         <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea>
+        <textarea name="message" id="message"></textarea>
       </div>
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit" />
     </form>
+    <div class="btns">
+      <a href="tel:7248510969" class="call">📞 Call Now</a>
+      <a href="https://wa.me/917248510969" target="_blank">💬 WhatsApp</a>
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
     <p><strong>Phone:</strong> <a href="tel:7248510969">7248510969</a></p>
     <p><strong>Email:</strong> <a href="mailto:ritikrana70231@gmail.com">ritikrana70231@gmail.com</a></p>
-    <p><strong>Location:</strong> Near Graphic Era Hill University, Bhimtal, Uttarakhand</p>
-
-    <div style="margin-top: 20px">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13695.96386121238!2d79.5525215!3d29.3587125!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDIxJzMxLjQiTiA3OcKwMzMnMDkuMSJF!5e0!3m2!1sen!2sin!4v1717928845622!5m2!1sen!2sin"
-        width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
+    <p><strong>Location:</strong></p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.1182170520075!2d79.5532982752695!3d29.351884874298236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a623e0259cfa7%3A0x5bc891ad71a5bdb3!2sGraphic%20Era%20Hill%20University%20Bhimtal%20Campus!5e0!3m2!1sen!2sin!4v1717929168316!5m2!1sen!2sin"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </section>
 
   <footer>
     <p>&copy; 2025 Araina Stays. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
